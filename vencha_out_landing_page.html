@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vencha Out | Together at Every Turn - Inclusive Eco-Tourism</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            850: '#064e3b',
+                            900: '#022c22',
+                            950: '#012018',
+                        },
+                        terracotta: {
+                            500: '#ea580c',
+                            600: '#c2410c',
+                            700: '#9a3412',
+                        },
+                        sand: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .focus-visible-outline:focus-visible {
+            outline: 3px solid #ea580c;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body class="bg-sand-50 text-stone-900 font-sans min-h-screen flex flex-col justify-between antialiased selection:bg-emerald-200 selection:text-emerald-900">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-sand-50/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus-visible-outline rounded-lg p-1">
+                <div class="w-11 h-11 rounded-xl bg-emerald-900 text-amber-400 flex items-center justify-center shadow-md shadow-emerald-900/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-mountain-sun text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-emerald-950 flex items-center gap-1">
+                        Vencha Out
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold border border-amber-300">VIRTUAL</span>
+                    </span>
+                    <p class="text-xs font-medium text-stone-500 tracking-wide uppercase">Together at Every Turn</p>
+                </div>
+            </a>
+
+            <!-- Header Action -->
+            <button onclick="trackAndOpenModal('Header Nav')" class="hidden sm:inline-flex items-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all focus-visible-outline">
+                <i class="fa-solid fa-paper-plane text-xs text-amber-400"></i>
+                Request Pilot Access
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+            <!-- Decorative Accent Blur -->
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-10 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                
+                <!-- Tagline Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-300 text-emerald-900 text-xs sm:text-sm font-semibold mb-8">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                    Inclusive Eco-Tourism for Everyone in Jamaica
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-tight mb-6">
+                    Nobody Left Behind <br class="hidden sm:block">
+                    <span class="gradient-text">on the Adventure.</span>
+                </h1>
+
+                <!-- Subheadline (Em-dash replaced with comma) -->
+                <p class="text-lg sm:text-xl font-medium text-stone-700 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Experience all of Jamaica’s beauty together, whether you walk the trails, use a wheelchair, walk with a cane, or tire easily on steep hills.
+                </p>
+
+                <!-- Hero Image Showcase with Reliable URL & Fallback -->
+                <div class="max-w-3xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-2xl border border-stone-200 relative bg-emerald-950 group">
+                    <img 
+                        id="heroImage" 
+                        src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop" 
+                        alt="Lush Jamaican eco-tourism mountain vista and trail" 
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop';" 
+                        class="w-full h-72 sm:h-96 object-cover opacity-90 transition-opacity duration-300"
+                    >
+                    <!-- Overlaid Virtual Pavilion Badge -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/30 to-transparent flex flex-col justify-end p-6 sm:p-8 text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-400 text-emerald-950 text-xs font-black uppercase tracking-wider mb-2 self-start shadow">
+                            <i class="fa-solid fa-vr-cardboard text-sm"></i> Live Pavilion Experience
+                        </div>
+                        <h3 class="text-white text-xl sm:text-2xl font-extrabold drop-shadow-sm">
+                            Connect Live from the Shaded Base Lounge
+                        </h3>
+                        <p class="text-emerald-100 text-xs sm:text-sm font-medium max-w-xl">
+                            Real-time 360° video streams bring mountain peaks and waterfall vistas directly to your comfortable seating area.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Value Proposition Card & Concrete Mobility Challenge Examples -->
+                <div class="bg-white/90 backdrop-blur-sm border border-stone-200/80 rounded-2xl p-6 sm:p-8 shadow-xl shadow-stone-200/50 max-w-3xl mx-auto mb-10 text-left space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-800 flex-shrink-0 flex items-center justify-center text-xl mt-1">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-base font-bold text-stone-900 uppercase tracking-wider mb-1">Our Simple Promise</h2>
+                            <p class="text-stone-700 leading-relaxed text-sm sm:text-base">
+                                <strong class="text-emerald-900 font-semibold">Vencha Out Virtual</strong> lets your whole family enjoy Jamaican excursions together. While your walking companions explore the steep trails, you sit back in a comfortable, shaded lounge and watch live in 360° virtual reality, talking to them the whole way!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Examples of Mobility Challenges -->
+                    <div class="border-t border-stone-100 pt-5">
+                        <h3 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-3">Who is Vencha Out designed for?</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-sand-50 border border-stone-200 text-stone-800">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-wheelchair text-lg"></i>
+                                </div>
+                                <span class="font-medium">Using a wheelchair or scooter</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-sand-50 border border-stone-200 text-stone-800">
+                                <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-person-walking-with-cane text-lg"></i>
+                                </div>
+                                <span class="font-medium">Walking with a cane, crutches, or walker</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-sand-50 border border-stone-200 text-stone-800">
+                                <div class="w-9 h-9 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-kit-medical text-lg"></i>
+                                </div>
+                                <span class="font-medium">Bad knees, joint pain, or steep hill fatigue</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-sand-50 border border-stone-200 text-stone-800">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-user-group text-lg"></i>
+                                </div>
+                                <span class="font-medium">Seniors & elders who can't do long climbs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button Area -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-14">
+                    <button onclick="trackAndOpenModal('Hero Primary CTA')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-terracotta-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all focus-visible-outline">
+                        <span>Join the Early Access List</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Key Feature Pills -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-stone-700 text-sm font-semibold">
+                    <div class="flex items-center justify-center gap-3 p-3 rounded-xl bg-stone-100/80 border border-stone-200">
+                        <i class="fa-solid fa-wifi text-emerald-700 text-base"></i>
+                        <span>Real-Time 360° Live Stream</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3 p-3 rounded-xl bg-stone-100/80 border border-stone-200">
+                        <i class="fa-solid fa-umbrella-beach text-amber-700 text-base"></i>
+                        <span>Shaded Base Lounge</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3 p-3 rounded-xl bg-stone-100/80 border border-stone-200">
+                        <i class="fa-solid fa-people-group text-emerald-700 text-base"></i>
+                        <span>Zero Family Separation</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VISUAL BLUEPRINT & HOW IT WORKS -->
+        <section class="py-16 bg-white border-y border-stone-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 mb-2">How It Works</h2>
+                    <p class="text-2xl sm:text-3xl font-extrabold text-stone-900">3 Easy Steps to Enjoy the Day Together</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="bg-sand-50 rounded-2xl p-6 border border-stone-200 relative flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-emerald-900 text-amber-400 font-bold text-lg flex items-center justify-center mb-4 shadow-md">
+                            1
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-lg mb-2">Arrive Together at the Base</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Everyone checks in together at our shaded, comfortable outdoor lounge at the foot of the hills.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-sand-50 rounded-2xl p-6 border border-stone-200 relative flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-600 text-white font-bold text-lg flex items-center justify-center mb-4 shadow-md">
+                            2
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-lg mb-2">Put on the Headset</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            While family and friends head up the trail, you put on a lightweight VR headset that connects live to the tour guide's camera.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-sand-50 rounded-2xl p-6 border border-stone-200 relative flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-emerald-900 text-amber-400 font-bold text-lg flex items-center justify-center mb-4 shadow-md">
+                            3
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-lg mb-2">See It & Talk Live</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Look around in 360 degrees as if you're right there at the top, and chat live with your family the whole way!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Secondary Call to Action -->
+                <div class="mt-12 text-center">
+                    <button onclick="trackAndOpenModal('How It Works CTA')" class="inline-flex items-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md transition-all focus-visible-outline">
+                        <span>Partner With Us For a Pilot</span>
+                        <i class="fa-solid fa-handshake text-amber-400"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDER BIO & MISSION STRIP -->
+        <section class="py-14 bg-sand-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-emerald-900 text-white flex items-center justify-center text-3xl font-extrabold flex-shrink-0 border-4 border-amber-400 shadow-md">
+                        LB
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="text-lg font-bold text-stone-900">Dr. Laura Borland</h3>
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Abilities Advocate & Founder</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mb-3">
+                            Dr. Laura Borland is a Social Worker, abilities advocate, and tech entrepreneur (Founder of <em>Vyllage®</em> and <em>Dad-Ease</em>). She believes no family member should have to sit out when everyone else goes on an adventure.
+                        </p>
+                        <div class="text-xs text-stone-500 font-medium">
+                            <i class="fa-solid fa-quote-left text-amber-600 mr-1"></i>
+                            "We're bringing family inclusion to all of Jamaica's most beautiful places so everyone gets to share the joy together."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER & DIRECT CONTACT PATH -->
+    <footer class="bg-emerald-950 text-stone-300 py-12 border-t border-emerald-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8 pb-8 border-b border-emerald-900/60">
+                <!-- Contact Details -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-address-card text-amber-400"></i> Direct Contact & Inquiries
+                    </h3>
+                    <p class="text-stone-400 text-xs sm:text-sm mb-4">
+                        Connect with Dr. Laura Borland directly regarding pilot partnerships, research collaborations, or tour operator inquiries.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-400 w-5"></i>
+                            <button onclick="copyContactEmail()" class="text-white hover:text-amber-300 underline font-medium focus-visible-outline rounded" title="Click to copy email">
+                                drlauraborland@gmail.com
+                            </button>
+                            <span id="copyToast" class="text-xs bg-amber-400 text-emerald-950 px-2 py-0.5 rounded font-bold hidden">Copied!</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-400 w-5"></i>
+                            <a href="tel:+18768332555" onclick="logMetric('Phone Click')" class="text-stone-200 hover:text-amber-300 transition-colors">
+                                +1 (876) 833-2555
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-400 w-5"></i>
+                            <span class="text-stone-300">Kingston, Jamaica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Right Actions -->
+                <div class="flex flex-col sm:items-end justify-center gap-4">
+                    <button onclick="trackAndOpenModal('Footer CTA')" class="bg-amber-500 hover:bg-amber-400 text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-md transition-all text-sm focus-visible-outline">
+                        Sign Up For Early Access
+                    </button>
+                    <!-- Founder Insights Toggle -->
+                    <button onclick="toggleAnalyticsDrawer()" class="inline-flex items-center gap-2 text-xs text-emerald-400 hover:text-amber-300 transition-colors focus-visible-outline rounded p-1">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Founder Validation Analytics</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+                <p>&copy; 2026 Vencha Out Virtual. All rights reserved. Designed for Inclusive Jamaican Tourism.</p>
+                <p>Designed by Dr. Laura Borland, DSW</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LEAD CAPTURE MODAL FORM -->
+    <div id="leadModal" class="fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4 hidden" aria-modal="true" role="dialog">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-stone-200 animate-in fade-in zoom-in-95 duration-200">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 flex items-center justify-center transition-colors focus-visible-outline" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="mb-6">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3 text-lg font-bold">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-stone-900">Request Early Pilot Access</h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-1">
+                    Join our early validation list to test Vencha Out Virtual at select Jamaican eco-tourism pilot sites.
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form id="pilotForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <!-- Email Field -->
+                <div>
+                    <label for="leadEmail" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+                        Email Address <span class="text-terracotta-600">*</span>
+                    </label>
+                    <input type="email" id="leadEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 text-stone-900 text-sm focus-visible-outline">
+                </div>
+
+                <!-- Role Selector -->
+                <div>
+                    <label for="leadRole" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+                        I am identifying as a: <span class="text-terracotta-600">*</span>
+                    </label>
+                    <select id="leadRole" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 text-stone-900 text-sm bg-white focus-visible-outline">
+                        <option value="" disabled selected>Select your primary role...</option>
+                        <option value="Traveler / Family Member">Traveler or Family Member with Mobility Needs</option>
+                        <option value="Tour Operator / Attraction Owner">Tour Operator / Eco-Tourism Attraction Owner</option>
+                        <option value="Accessibility Advocate / Partner">Accessibility Advocate / Institutional Partner</option>
+                        <option value="Investor / Tech Partner">Investor or Technology Partner</option>
+                        <option value="Other">Other Interested Stakeholder</option>
+                    </select>
+                </div>
+
+                <!-- Note / Message -->
+                <div>
+                    <label for="leadNote" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+                        Optional Note / Specific Attraction Interest
+                    </label>
+                    <textarea id="leadNote" rows="3" placeholder="Tell us which excursion or site you'd like to see Vencha Out installed..." class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 text-stone-900 text-sm focus-visible-outline"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-emerald-900 hover:bg-emerald-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2 focus-visible-outline">
+                    <span>Submit & Request Access</span>
+                    <i class="fa-solid fa-paper-plane text-xs text-amber-400"></i>
+                </button>
+            </form>
+
+            <p class="text-[11px] text-stone-500 text-center mt-4">
+                We respect your privacy. No spam. Used strictly for pilot research validation.
+            </p>
+        </div>
+    </div>
+
+    <!-- SUCCESS TOAST NOTIFICATION -->
+    <div id="successToast" class="fixed bottom-6 right-6 z-50 bg-emerald-900 text-white px-5 py-4 rounded-xl shadow-2xl flex items-center gap-3 border border-emerald-700 hidden">
+        <i class="fa-solid fa-circle-check text-amber-400 text-xl"></i>
+        <div>
+            <h4 class="font-bold text-sm">Access Request Received!</h4>
+            <p class="text-xs text-emerald-200">Thank you for validating Vencha Out. We'll be in touch soon.</p>
+        </div>
+    </div>
+
+    <!-- FOUNDER VALIDATION ANALYTICS DRAWER -->
+    <div id="analyticsDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-stone-900 text-stone-100 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col border-l border-stone-800">
+        <!-- Drawer Header -->
+        <div class="p-6 border-b border-stone-800 flex items-center justify-between bg-stone-950">
+            <div>
+                <h3 class="font-extrabold text-base text-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-chart-pie"></i> Founder Demand Metrics
+                </h3>
+                <p class="text-xs text-stone-400">Vencha Out Local Validation Engine</p>
+            </div>
+            <button onclick="toggleAnalyticsDrawer()" class="text-stone-400 hover:text-white p-2 rounded-lg focus-visible-outline">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="p-6 overflow-y-auto flex-grow space-y-6">
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 text-center">
+                    <span class="block text-2xl font-black text-white" id="metricViews">0</span>
+                    <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider">Page Views</span>
+                </div>
+                <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 text-center">
+                    <span class="block text-2xl font-black text-amber-400" id="metricClicks">0</span>
+                    <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider">CTA Clicks</span>
+                </div>
+                <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 text-center">
+                    <span class="block text-2xl font-black text-emerald-400" id="metricLeads">0</span>
+                    <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider">Form Leads</span>
+                </div>
+                <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 text-center">
+                    <span class="block text-2xl font-black text-terracotta-500" id="metricConversion">0%</span>
+                    <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider">Conversion %</span>
+                </div>
+            </div>
+
+            <!-- Lead List Table -->
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <h4 class="text-xs font-bold text-stone-300 uppercase tracking-wider">Captured Test Leads</h4>
+                    <button onclick="exportLeadsCSV()" class="text-xs bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-2.5 py-1 rounded transition-colors">
+                        <i class="fa-solid fa-download mr-1"></i> Export CSV
+                    </button>
+                </div>
+
+                <div id="leadsList" class="bg-stone-950 rounded-xl p-3 border border-stone-800 max-h-56 overflow-y-auto text-xs space-y-2">
+                    <!-- Leads rendered dynamically -->
+                    <p class="text-stone-500 text-center py-4">No leads captured yet. Click CTA buttons to test!</p>
+                </div>
+            </div>
+
+            <!-- Testing Utilities -->
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between">
+                <button onclick="simulateTraffic()" class="text-xs bg-stone-800 hover:bg-stone-700 text-stone-300 px-3 py-2 rounded-lg transition-colors">
+                    <i class="fa-solid fa-plus mr-1"></i> Simulate Test Lead
+                </button>
+                <button onclick="resetMetrics()" class="text-xs text-red-400 hover:text-red-300 transition-colors">
+                    Reset Data
+                </button>
+            </div>
+        </div>
+
+        <div class="p-4 bg-stone-950 border-t border-stone-800 text-[11px] text-stone-500 text-center">
+            Data saved strictly in your local browser storage for validation.
+        </div>
+    </div>
+
+    <!-- APP & ANALYTICS SCRIPT -->
+    <script>
+        // Key Storage Names
+        const STORAGE_KEY_METRICS = 'vencha_out_metrics_v1';
+        const STORAGE_KEY_LEADS = 'vencha_out_leads_v1';
+
+        // Default Metrics Structure
+        let metrics = {
+            views: 0,
+            ctaClicks: 0,
+            formSubmissions: 0,
+            contactClicks: 0
+        };
+
+        let leads = [];
+
+        // Load data on window load
+        window.onload = function() {
+            loadStoredData();
+            incrementPageView();
+            updateAnalyticsUI();
+        };
+
+        function loadStoredData() {
+            const savedMetrics = localStorage.getItem(STORAGE_KEY_METRICS);
+            if (savedMetrics) {
+                try { metrics = JSON.parse(savedMetrics); } catch(e){}
+            }
+
+            const savedLeads = localStorage.getItem(STORAGE_KEY_LEADS);
+            if (savedLeads) {
+                try { leads = JSON.parse(savedLeads); } catch(e){}
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem(STORAGE_KEY_METRICS, JSON.stringify(metrics));
+            localStorage.setItem(STORAGE_KEY_LEADS, JSON.stringify(leads));
+            updateAnalyticsUI();
+        }
+
+        function incrementPageView() {
+            metrics.views += 1;
+            saveData();
+        }
+
+        function logMetric(type) {
+            if (type === 'CTA Click') metrics.ctaClicks += 1;
+            if (type === 'Phone Click') metrics.contactClicks += 1;
+            saveData();
+        }
+
+        function trackAndOpenModal(sourceName) {
+            logMetric('CTA Click');
+            openModal();
+        }
+
+        function openModal() {
+            document.getElementById('leadModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('leadModal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('leadEmail').value;
+            const role = document.getElementById('leadRole').value;
+            const note = document.getElementById('leadNote').value;
+            const timestamp = new Date().toLocaleString();
+
+            const newLead = { email, role, note, timestamp };
+            leads.unshift(newLead);
+            
+            metrics.formSubmissions += 1;
+            saveData();
+
+            closeModal();
+            document.getElementById('pilotForm').reset();
+            showSuccessToast();
+        }
+
+        function showSuccessToast() {
+            const toast = document.getElementById('successToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function copyContactEmail() {
+            const emailText = "drlauraborland@gmail.com";
+            
+            // Clipboard fallback
+            const tempInput = document.createElement("input");
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            logMetric('Phone Click'); // count as contact intent
+
+            const toast = document.getElementById('copyToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 2500);
+        }
+
+        function toggleAnalyticsDrawer() {
+            const drawer = document.getElementById('analyticsDrawer');
+            drawer.classList.toggle('translate-x-full');
+            updateAnalyticsUI();
+        }
+
+        function updateAnalyticsUI() {
+            document.getElementById('metricViews').textContent = metrics.views;
+            document.getElementById('metricClicks').textContent = metrics.ctaClicks;
+            document.getElementById('metricLeads').textContent = metrics.formSubmissions;
+
+            const conversionRate = metrics.views > 0 
+                ? ((metrics.formSubmissions / metrics.views) * 100).toFixed(1) 
+                : 0;
+            document.getElementById('metricConversion').textContent = conversionRate + '%';
+
+            const leadsContainer = document.getElementById('leadsList');
+            if (leads.length === 0) {
+                leadsContainer.innerHTML = `<p class="text-stone-500 text-center py-4">No leads captured yet. Click CTA buttons to test!</p>`;
+            } else {
+                leadsContainer.innerHTML = leads.map(lead => `
+                    <div class="p-2.5 rounded bg-stone-900 border border-stone-800">
+                        <div class="flex items-center justify-between text-amber-400 font-bold mb-0.5">
+                            <span>${escapeHtml(lead.role)}</span>
+                            <span class="text-[10px] text-stone-500">${escapeHtml(lead.timestamp)}</span>
+                        </div>
+                        <div class="text-stone-200 font-medium">${escapeHtml(lead.email)}</div>
+                        ${lead.note ? `<div class="text-stone-400 text-[11px] mt-1 italic font-sans">"${escapeHtml(lead.note)}"</div>` : ''}
+                    </div>
+                `).join('');
+            }
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[m];
+            });
+        }
+
+        function simulateTraffic() {
+            const roles = ["Traveler / Family Member", "Tour Operator / Attraction Owner", "Accessibility Advocate / Partner"];
+            const randomRole = roles[Math.floor(Math.random() * roles.length)];
+            const fakeEmail = `test.user${Math.floor(Math.random() * 900 + 100)}@example.com`;
+            
+            leads.unshift({
+                email: fakeEmail,
+                role: randomRole,
+                note: "Interested in testing Blue Mountain pilot site.",
+                timestamp: new Date().toLocaleString()
+            });
+
+            metrics.ctaClicks += 1;
+            metrics.formSubmissions += 1;
+            saveData();
+        }
+
+        function resetMetrics() {
+            if (confirm("Are you sure you want to clear stored analytics data?")) {
+                metrics = { views: 1, ctaClicks: 0, formSubmissions: 0, contactClicks: 0 };
+                leads = [];
+                saveData();
+            }
+        }
+
+        function exportLeadsCSV() {
+            if (leads.length === 0) {
+                alert("No leads available to export.");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,Email,Role,Timestamp,Note\n";
+            leads.forEach(l => {
+                const row = `"${l.email}","${l.role}","${l.timestamp}","${(l.note || '').replace(/"/g, '""')}"`;
+                csvContent += row + "\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `vencha_out_leads_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
